@@ -1,0 +1,25 @@
+{
+  "name": "vaultographiter",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "node server/index.mjs",
+    "dev:client": "vite",
+    "build": "tsc --noEmit && vite build"
+  },
+  "dependencies": {
+    "chokidar": "^3.6.0",
+    "express": "^4.19.2",
+    "gray-matter": "^4.0.3",
+    "three": "^0.165.0",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "@types/three": "^0.165.0",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.0"
+  }
+}
