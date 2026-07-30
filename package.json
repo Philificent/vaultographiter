@@ -2,7 +2,25 @@
   "name": "vaultographiter",
   "version": "0.1.0",
   "private": true,
+  "description": "Interactive 3D cartographer for your Obsidian vault — neural, brain, universe, and matrix visualization modes with live updates and a replay timeline",
+  "license": "MIT",
+  "author": "Philificent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Philificent/vaultographiter.git"
+  },
+  "keywords": [
+    "obsidian",
+    "visualization",
+    "threejs",
+    "webgl",
+    "knowledge-graph",
+    "pkm"
+  ],
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "concurrently -n server,client -c yellow,cyan \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "node server/index.mjs",

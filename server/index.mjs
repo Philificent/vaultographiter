@@ -16,7 +16,21 @@ const app = express();
 const server = http.createServer(app);
 const wss = new WebSocketServer({ server, path: '/ws' });
 
-let snapshot = await scanVault(VAULT_PATH);
+// Fail fast with recovery guidance instead of an uncaught stack trace when the
+// vault directory is missing or unreadable.
+let snapshot;
+try {
+  snapshot = await scanVault(VAULT_PATH);
+} catch (err) {
+  console.error(`[vaultographiter] failed to scan vault at "${VAULT_PATH}": ${err.message}`);
+  console.error(
+    '[vaultographiter] set the VAULT_PATH environment variable to an existing Obsidian vault directory,'
+  );
+  console.error(
+    `[vaultographiter] e.g. VAULT_PATH=/path/to/vault npm run dev:server (default: ${path.join(os.homedir(), 'Documents', 'Obsidian')})`
+  );
+  process.exit(1);
+}
 console.log(
   `[vaultographiter] scanned "${snapshot.vaultName}": ${snapshot.notes.length} notes, ${snapshot.edges.length} links`
 );
