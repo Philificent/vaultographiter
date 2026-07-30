@@ -6,6 +6,12 @@ Vaultographiter scans an [Obsidian](https://obsidian.md) vault, builds the wikil
 
 ![Neural mode — force-directed wikilink graph with glass-orb nodes](docs/screenshots/neural.png)
 
+## Replay: your vault, regrown in ten seconds
+
+![Replay timeline — the vault growing note by note from the first note to now](docs/media/replay.gif)
+
+Hit ▶ and the scene rewinds to your very first note, then regrows the whole vault in creation order — links snap in as the notes that made them appear. Smoother [MP4 version here](docs/media/replay.mp4).
+
 ## Modes
 
 | | |
