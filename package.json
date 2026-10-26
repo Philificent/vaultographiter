@@ -28,7 +28,7 @@
     "build": "tsc --noEmit && vite build"
   },
   "dependencies": {
-    "chokidar": "^3.6.0",
+    "chokidar": "^5.0.0",
     "express": "^5.2.1",
     "gray-matter": "^4.0.3",
     "three": "^0.165.0",
