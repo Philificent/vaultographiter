@@ -36,7 +36,7 @@
   },
   "devDependencies": {
     "@types/three": "^0.165.0",
-    "concurrently": "^8.2.2",
+    "concurrently": "^10.0.6",
     "typescript": "^5.4.5",
     "vite": "^8.3.4"
   }
